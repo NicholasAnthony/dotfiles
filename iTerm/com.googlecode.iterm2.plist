@@ -1134,7 +1134,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>/Users/Shared/Settings/iTerm</string>
+	<string>/Users/Shared/dotfiles/iTerm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -1180,15 +1180,19 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>266 194 599 388 0 0 1920 1200 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>815 796 796 473 0 0 2560 1578 </string>
+	<string>815 888 796 473 0 0 2560 1578 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>5 18 1171 1547 0 0 2560 1578 </string>
+	<string>5 18 2548 1555 0 0 2560 1578 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>262 7 2035 1566 0 0 2560 1578 </string>
+	<string>262 26 1171 1547 0 0 2560 1578 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>5 5 1267 1568 0 0 2560 1578 </string>
+	<string>5 24 1171 1547 0 0 2560 1578 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>427 0 1171 1178 0 0 1920 1178 </string>
+	<string>792 0 1171 1547 0 0 2560 1578 </string>
+	<key>NSWindow Frame iTerm Window 4</key>
+	<string>5 7 2548 1566 0 0 2560 1578 </string>
+	<key>NSWindow Frame iTerm Window 5</key>
+	<string>469 31 1171 1547 0 0 2560 1578 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2504,7 +2508,7 @@
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -2549,7 +2553,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/Shared/Settings/iTerm</string>
+	<string>/Users/Shared/dotfiles/iTerm</string>
 	<key>SUEnableAutomaticChecks</key>
 	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
