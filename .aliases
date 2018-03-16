@@ -1,3 +1,4 @@
+# CONFIG
 alias dot="cd $DOTFILES_PATH"
 alias dotConfig="subl $DOTFILES_PATH"
 alias shared="subl dotfiles"
@@ -5,13 +6,53 @@ alias zshconfig="subl ~/.zshrc"
 alias zc="subl -n ~/.zshrc"
 alias ohmyzsh="subl ~/.oh-my-zsh"
 alias reload="source ~/.zshrc"
+
+# DIRECTORIES
 alias sites="cd ~/Sites"
 alias repos="cd ~/Repos"
 alias code="cd ~/Code"
 alias desk="cd ~/Desktop"
-# alias skydeo_vps="ssh admin@70.32.73.201"
+alias dsites="cd ~/Dropbox/sites"
+
+# RAILS
 alias r="rails"
 alias s="server"
-alias dsites="cd ~/Dropbox/sites"
+
+# GIT
+alias gig="subl .gitignore"
+
+# alias ohmy="subl -n $ZSH && reload"
+# alias reload="source $ZSH_CONFIG_USER"
+# alias zc="subl -n $ZSH_CONFIG_USER && reload"
+
+# iOS
+alias killsim="  ps aux | grep _sim | grep -v grep | awk '{print $2}' | xargs kill -9 2>/dev/null"
+
+# OSX
 alias hidedesktop="defaults write com.apple.finder CreateDesktop false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop true && killall Finder"
+
+# OSX Processes
+alias killspot="sudo killall mds"
+alias killsoftup="ps -ef | grep softwareupdated | awk ‘{print $2}’ | xargs sudo kill -9"
+alias killdock="killall Dock"
+alias killfind="killall Finder"
+alias killer="killspot && killsoftup && killdock && killfind"
+
+# HEROKU
+alias herlot="heroku logs -t"
+alias herlog="heroku logs"
+alias herpu="git push heroku master"
+alias herop="heroku open"
+
+# Projects 
+alias goApp="cd $HOME/Repos/GoinOut/GoinOut_iOS"
+
+# FUNCTIONS
+function trashd () {
+  mv -R $1 ~/.Trash/
+}
+
+function trash () {
+  mv ~/.Trash/
+}
