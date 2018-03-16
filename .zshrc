@@ -118,13 +118,13 @@ fi
 
 echo "\n"
 
-if [[ -s "$ZSH_CONFIG_USER" ]]; then
-  echo "\n💾  Loading User Config $ZSH_CONFIG_USER"
-  source "$ZSH_CONFIG_USER"
-  echo "✔️ Done."
-else 
-  echo "User specific zsh config not found"
-fi
+# if [[ -s "$ZSH_CONFIG_USER" ]]; then
+#   echo "\n💾  Loading User Config $ZSH_CONFIG_USER"
+#   source "$ZSH_CONFIG_USER"
+#   echo "✔️ Done."
+# else 
+#   echo "User specific zsh config not found"
+# fi
 
 echo "\n"
 
