@@ -1,0 +1,579 @@
+echo "Loading $USER's ZSH Script"
+
+# If you come from bash you might have to change your $PATH.
+export PATH=/usr/local/sbin:$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/nicholasanthony/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
+# ZSH_THEME="honukai"
+# ZSH_THEME=""
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+ENABLE_CORRECTION="false"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+# plugins=(git git-prompt npm zsh-output-highlighting)
+# plugins=(git ruby bundler osx rake ruby nvm rvm aws bower brew colorize emoji emoji-clock gem git-extras git-flow git-prompt github grunt gulp jsontools nvm osx rails sublime npm )
+plugins=( git heroku colorize zsh-syntax-highlighting npm )
+
+source $HOME/iTerm2colors.sh
+# echo "COOL SHIT"
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+export EDITOR='subl'
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+alias zshconfig="subl ~/.zshrc"
+alias zc="subl -n ~/.zshrc"
+alias ohmyzsh="subl ~/.oh-my-zsh"
+alias reload="source ~/.zshrc"
+alias sites="cd ~/Sites"
+alias repos="cd ~/Repos"
+alias code="cd ~/Code"
+
+
+function trashd () {
+  mv -R $1 ~/.Trash/
+}
+
+
+function trash () {
+  mv ~/.Trash/
+}
+
+
+
+# MY CONFIGURATION
+# DEFAULT_USER=`whoami`
+# $HOME/.npm-packages/bin
+# /usr/local/lib/node_modules/npm/bin
+# export PATH="/opt/local/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH" # Add RVM to PATH for scripting
+# export NODE_PATH="$HOME/.npm-packages/lib/node_modules:/Users/nicholasanthony/.nvm/versions/node/v8.9.1/lib/node_modules"
+
+# export NODE_PATH=/Users/nicholasanthony/.nvm/versions/node/v8.9.1/bin/node:
+                  
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
+alias desk="cd ~/Desktop"
+
+# alias skydeo_vps="ssh admin@70.32.73.201"
+
+# GO LANG
+# export GOROOT=/usr/local/opt/go/libexec
+# export GOPATH=$HOME/.go
+# export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+
+# MAMP
+export MAMPPATH=/Applications/MAMP/Library/bin
+export MAMPPHPPHPPATH=/Applications/MAMP/bin/php/php5.6.28/bin
+export PATH=$MAMPPHPPHPPATH:$PATH
+export BINPATH=~/Users/nicholasanthony/.bin
+export PATH=$BINPATH:$PATH
+
+
+
+alias r="rails"
+alias s="server"
+alias dsites="cd ~/Dropbox/sites"
+
+
+
+alias hidedesktop="defaults write com.apple.finder CreateDesktop false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop true && killall Finder"
+
+alias psql_start="'/Applications/Postgres.app/Contents/Versions/9.6/bin'/psql -p5432"
+
+
+
+
+
+# http://www.defaults-write.com/10-terminal-commands-to-speed-up-macos-sierra-on-your-mac/
+
+# 1. Disable animations when opening and closing windows.
+# defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
+# 2. Disable animations when opening a Quick Look window.
+# defaults write -g QLPanelAnimationDuration -float 0
+
+# 3. Accelerated playback when adjusting the window size (Cocoa applications).
+# defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# 4. Disable animation when opening the Info window in Finder (cmd⌘ + i).
+# defaults write com.apple.finder DisableAllAnimations -bool true
+
+# 5. Disable animations when you open an application from the Dock.
+# defaults write com.apple.dock launchanim -bool false
+
+# 6. Make all animations faster that are used by Mission Control.
+# defaults write com.apple.dock expose-animation-duration -float 0.1
+
+# 7. Disable the delay when you hide the Dock
+# defaults write com.apple.Dock autohide-delay -float 0
+
+
+
+# Undo changes
+# If you want any of the above commands undo than is possible using the defaults delete command.
+# 
+# defaults delete domain key
+# 
+# Example: To undo the adjustment number 10, type the command:
+# 
+# defaults delete NSGlobalDomain KeyRepeat
+# 
+# After undoing, you need to restart your Mac.
+
+
+
+# GOOGLE_API_KEY=AIzaSyDdXBGfTHKgJEsfGoVvchrdJPJXNfcmuYM
+# GOOGLE_DEFAULT_CLIENT_ID=1059071297846-anngdetaift4v5sbsvlcqm78qlqckfl0.apps.googleusercontent.com
+# GOOGLE_DEFAULT_CLIENT_SECRET=i_MNCbVuZMvnucJDyNYV7h5u
+
+
+alias nyn="cd /Users/nicholasanthony/Repos/newyorknick"
+alias startsky="SOURCEMAP=true npm run dev -s"
+
+
+alias hosts="subl /etc/hosts"
+
+
+
+
+
+# MYSQL Install
+# A CA file has been bootstrapped using certificates from the SystemRoots
+# keychain. To add additional certificates (e.g. the certificates added in
+# the System keychain), place .pem files in
+#   /usr/local/etc/openssl/certs
+# 
+# and run
+#   /usr/local/opt/openssl/bin/c_rehash
+# 
+# This formula is keg-only, which means it was not symlinked into /usr/local.
+# 
+# Apple has deprecated use of OpenSSL in favor of its own TLS and crypto libraries
+# 
+# If you need to have this software first in your PATH run:
+#   echo 'export PATH="/usr/local/opt/openssl/bin:$PATH"' >> ~/.zshrc
+# 
+# For compilers to find this software you may need to set:
+#     LDFLAGS:  -L/usr/local/opt/openssl/lib
+#     CPPFLAGS: -I/usr/local/opt/openssl/include
+# For pkg-config to find this software you may need to set:
+#     PKG_CONFIG_PATH: /usr/local/opt/openssl/lib/pkgconfig
+# 
+# ==> Summary
+# 🍺  /usr/local/Cellar/openssl/1.0.2k: 1,696 files, 12M
+# ==> Installing mysql
+# ==> Downloading https://homebrew.bintray.com/bottles/mysql-5.7.17.sierra.bottle.1.tar.gz
+# ######################################################################## 100.0%
+# ==> Pouring mysql-5.7.17.sierra.bottle.1.tar.gz
+# ==> /usr/local/Cellar/mysql/5.7.17/bin/mysqld --initialize-insecure --user=nicholasanthony --basedir=/usr/local/Cellar/mysql/5.7.17 # --datadir=/usr/loca
+# ==> Caveats
+# We've installed your MySQL database without a root password. To secure it run:
+#     mysql_secure_installation
+# 
+# To connect run:
+#     mysql -uroot
+# 
+# To have launchd start mysql now and restart at login:
+#   brew services start mysql
+# Or, if you don't want/need a background service you can just run:
+#   mysql.server start
+# ==> Summary
+# 🍺  /usr/local/Cellar/mysql/5.7.17: 321 files, 234.4M
+
+
+
+# isight camera fix
+alias camerafix="sudo killall VDCAssistant"
+
+
+# homebrew install
+# ==> Downloading https://homebrew.bintray.com/bottles/mongodb-3.4.2.sierra.bottle.tar.gz
+# ######################################################################## 100.0%
+# ==> Pouring mongodb-3.4.2.sierra.bottle.tar.gz
+# ==> Caveats
+# To have launchd start mongodb now and restart at login:
+#   brew services start mongodb
+# Or, if you don't want/need a background service you can just run:
+#   mongod --config /usr/local/etc/mongod.conf
+# ==> Summary
+# 🍺  /usr/local/Cellar/mongodb/3.4.2: 17 files, 261.9M# 
+
+alias mongo_start="mongod --config /usr/local/etc/mongod.conf & tail -f /usr/local/var/log/mongodb/mongo.log"
+
+alias rnr="cd /Users/nicholasanthony/Repos/react-native"
+alias rn="react-native "
+alias simdir="cd /Applications/Xcode.app/Contents/Developer/Applications"
+alias simreset="xcrun simctl erase all"
+alias rn7='react-native run-ios --simulator "iPhone 7"'
+alias explore="cd /Users/nicholasanthony/Repos/explore-saratoga"
+export PATH="$HOME/.yarn/bin:$PATH"
+
+# SEARCH ➜  Code grep --exclude-dir=node_modules --exclude-dir=bower_components --exclude-dir=jspm_packages --exclude=\*.min.js --include=\*.js -rnw . -e 'cors' -r
+alias zio="cd /Applications/MAMP/htdocs/zumby/webroot"
+alias zServ="cd /Applications/MAMP/htdocs/zumby/microservices/lad/zumby-services"
+alias mamp="cd /Applications/MAMP/"
+alias mampmysql="cd /Applications/MAMP/tmp/mysql/"
+
+alias zumbydev="ssh -p 1 webapp@172.31.21.74"
+
+# {
+#     "646F6E7A_00000000_00000001_6E7A6361_696D6963" = 1;
+#     AKDeviceUnlockState = 0;
+#     AKLastCheckInAttemptDate = "2017-09-28 08:39:07 +0000";
+#     AKLastCheckInSuccessDate = "2017-09-28 08:39:11 +0000";
+#     AKLastEmailListRequestDateKey = "2017-09-21 19:06:03 +0000";
+#     "Apple Inc. Apple Mobile Device (Recovery Mode)" = 1;
+#     "Apple Inc. FaceTime HD Camera (Built-in)" = 1;
+#     "Apple Inc. iPad" = 1;
+#     "Apple Inc. iPhone" = 1;
+#     AppleActionOnDoubleClick = Minimize;
+#     AppleAntiAliasingThreshold = 4;
+#     AppleAquaColorVariant = 6;
+#     AppleHighlightColor = "1.000000 0.937255 0.690196";
+#     AppleInterfaceStyle = Dark;
+#     AppleKeyboardUIMode = 2;
+#     AppleLanguages =     (
+#         "en-US"
+#     );
+#     AppleLanguagesDidMigrate = "10.12.6";
+#     AppleLocale = "en_US";
+#     AppleMiniaturizeOnDoubleClick = 0;
+#     AppleShowAllExtensions = 1;
+#     AppleWindowTabbingMode = always;
+#     "Brother MFC-J870DW" = 1;
+#     "Brother MFC-J985DW" = 1;
+#     "Brother MFC-L2700DW series" = 1;
+#     "Brother MFC-L2720DW series" = 1;
+#     "Brother MFC-L2740DW series" = 1;
+#     "Brother MFC-L6800DW series" = 1;
+#     "Dell B2375dfw Mono MFP" = 1;
+#     "Dell MFP E514dw" = 1;
+#     "HP ENVY 4500 series" = 1;
+#     "HP ENVY 4520 series" = 1;
+#     "HP OfficeJet 4650 series" = 1;
+#     "HP OfficeJet 6950" = 1;
+#     "HP OfficeJet Pro 6970" = 1;
+#     "HP OfficeJet Pro 8710" = 1;
+#     "HP OfficeJet Pro 8720" = 1;
+#     "HP OfficeJet Pro 8730" = 1;
+#     "HP Officejet 6600" = 1;
+#     "HP Officejet Pro 6830" = 1;
+#     "HP Officejet Pro 8610" = 1;
+#     "HP Photosmart 5520 series" = 1;
+#     "Hewlett Packard 200 colorMFP M276nw" = 1;
+#     "Hewlett Packard 300 colorMFP M375nw" = 1;
+#     "Hewlett Packard CM1415fnw" = 1;
+#     "Hewlett Packard MFP M277dw" = 1;
+#     "Hewlett Packard MFP M377dw" = 1;
+#     "Hewlett Packard MFP M426fdw" = 1;
+#     "Hewlett Packard MFP M476dw" = 1;
+#     NSAutomaticCapitalizationEnabled = 1;
+#     NSAutomaticDashSubstitutionEnabled = 1;
+#     NSAutomaticPeriodSubstitutionEnabled = 0;
+#     NSAutomaticQuoteSubstitutionEnabled = 1;
+#     NSAutomaticSpellingCorrectionEnabled = 1;
+#     NSAutomaticTextCompletionEnabled = 1;
+#     NSAutomaticWindowAnimationsEnabled = 0;
+#     NSLinguisticDataAssetsRequestTime = "2017-09-28 01:44:29 +0000";
+#     NSLinguisticDataAssetsRequested =     (
+#         en,
+#         "en_US",
+#         de
+#     );
+#     NSNavPanelFileLastListModeForOpenModeKey = 1;
+#     NSNavPanelFileListModeForOpenMode2 = 1;
+#     NSNavPanelSidebarKeyForOpen =     (
+#     );
+#     NSNavPanelSidebarKeyForSave =     (
+#     );
+#     NSPersonNameDefaultDisplayNameOrder = 0;
+#     NSPersonNameDefaultShortNameFormat = 0;
+#     NSPersonNameDefaultShouldPreferNicknamesPreference = 0;
+#     NSPreferredWebServices =     {
+#         NSWebServicesProviderWebSearch =         {
+#             NSDefaultDisplayName = Google;
+#             NSProviderIdentifier = "com.google.www";
+#         };
+#     };
+#     NSQuitAlwaysKeepsWindows = 1;
+#     NSUserDictionaryReplacementItems =     (
+#                 {
+#             on = 1;
+#             replace = fn;
+#             with = fucking;
+#         },
+#                 {
+#             on = 1;
+#             replace = fk;
+#             with = fuck;
+#         },
+#                 {
+#             on = 1;
+#             replace = fd;
+#             with = fucked;
+#         },
+#                 {
+#             on = 1;
+#             replace = omw;
+#             with = "On my way!";
+#         },
+#                 {
+#             on = 1;
+#             replace = ctime;
+#             with = "\\U23f0 11AM - ";
+#         },
+#                 {
+#             on = 1;
+#             replace = bw;
+#             with = Brickwork;
+#         },
+#                 {
+#             on = 1;
+#             replace = na1;
+#             with = nanthony1;
+#         }
+#     );
+#     NavPanelFileListModeForOpenMode = 1;
+#     "Nuvoton HID Transfer" = 1;
+#     SyncServicesServerWasActive = 1;
+#     WebAutomaticSpellingCorrectionEnabled = 1;
+#     "_HIHideMenuBar" = 1;
+#     "com.apple.keyboard.fnState" = 1;
+#     "com.apple.sound.beep.feedback" = 1;
+#     "com.apple.sound.beep.flash" = 0;
+#     "com.apple.sound.device.threshold" = 32200269;
+#     "com.apple.springing.delay" = "0.2";
+#     "com.apple.springing.enabled" = 1;
+#     "com.apple.trackpad.forceClick" = 1;
+#     "com.apple.trackpad.scaling" = 3;
+# }
+
+#   # 1. Disable animations when opening and closing windows.
+#   defaults read NSGlobalDomain NSAutomaticWindowAnimationsEnabled
+# 
+#   # 2. Disable animations when opening a Quick Look window.
+#   defaults read -g QLPanelAnimationDuration
+# 
+#   # 3. Accelerated playback when adjusting the window size (Cocoa applications).
+#   defaults read NSGlobalDomain NSWindowResizeTime
+# 
+#   # 4. Disable animation when opening the Info window in Finder (cmd⌘ + i).
+#   defaults read com.apple.finder DisableAllAnimations
+# 
+#   # 5. Disable animations when you open an application from the Dock.
+#   defaults read com.apple.dock launchanim
+# 
+#   # 6. Make all animations faster that are used by Mission Control.
+#   defaults read com.apple.dock expose-animation-duration
+# 
+#   # 7. Disable the delay when you hide the Dock
+#   defaults read com.apple.Dock autohide-delay
+# 
+#   defaults read com.apple.mail DisableReplyAnimations
+#   defaults read com.apple.mail DisableSendAnimations
+
+function disableAnimations() {
+  # 1. Disable animations when opening and closing windows.
+  defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
+  # 2. Disable animations when opening a Quick Look window.
+  defaults write -g QLPanelAnimationDuration -float 0
+
+  # 3. Accelerated playback when adjusting the window size (Cocoa applications).
+  defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+  # 4. Disable animation when opening the Info window in Finder (cmd⌘ + i).
+  defaults write com.apple.finder DisableAllAnimations -bool true
+
+  # 5. Disable animations when you open an application from the Dock.
+  defaults write com.apple.dock launchanim -bool false
+
+  # 6. Make all animations faster that are used by Mission Control.
+  defaults write com.apple.dock expose-animation-duration -float 0.1
+
+  # 7. Disable the delay when you hide the Dock
+  defaults write com.apple.Dock autohide-delay -float 0
+
+  defaults write com.apple.mail DisableReplyAnimations -bool true
+  defaults write com.apple.mail DisableSendAnimations -bool true
+}
+
+function enableAnimations() {
+  # 1. Disable animations when opening and closing windows.
+  defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool true
+
+  # 2. Disable animations when opening a Quick Look window.
+  defaults write -g QLPanelAnimationDuration -float 1
+
+  # 3. Accelerated playback when adjusting the window size (Cocoa applications).
+  defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+  # 4. Disable animation when opening the Info window in Finder (cmd⌘ + i).
+  defaults write com.apple.finder DisableAllAnimations -bool false
+
+  # 5. Disable animations when you open an application from the Dock.
+  defaults write com.apple.dock launchanim -bool true
+
+  # 6. Make all animations faster that are used by Mission Control.
+  defaults write com.apple.dock expose-animation-duration -float 0.1
+
+  # 7. Disable the delay when you hide the Dock
+  defaults write com.apple.Dock autohide-delay -float 1
+
+  defaults write com.apple.mail DisableReplyAnimations -bool false
+  defaults write com.apple.mail DisableSendAnimations -bool false
+}
+# https://medium.com/@ayltai/need-for-speed-how-to-squeeze-every-last-drop-out-of-macos-sierra-7ac17b680c98
+# DEFAULT IS FOUR
+# sudo nvram boot-args="vm_compressor=2"
+alias gig='subl .gitignore'
+
+# prompt_end() {
+#   if [[ -n $CURRENT_BG ]]; then
+#       print -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+#   else
+#       print -n "%{%k%}"
+#   fi
+
+#   print -n "%{%f%}"
+#   CURRENT_BG='' 
+
+#   #Adds the new line and ➜ as the start character.
+#   printf "\n\n 🛥 🌇 🔮 💰 🔜 ↪️  ";
+  
+# }
+
+alias rmq='rabbitmqctl'
+alias rmqplugins='rabbitmq-plugins'
+alias rmqserver='rabbitmq-server'
+
+function clog () {
+  echo '\n' >> README.md
+  echo $1 >>  README.md
+}
+alias maMy="/Applications/MAMP/Library/bin/mysql -uroot -proot --socket=/Applications/MAMP/tmp/mysql/mysql.sock"
+alias myMyd="/Applications/MAMP/Library/bin/mysqld"
+alias mongoTunnel="ssh -L 27000:127.0.0.1:27017 -p 1 jenkins@172.31.21.74 -fN -vv"
+
+
+# source /Users/nicholasanthony/Repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+autoload -U promptinit; promptinit
+# prompt pure
+alias mix="cd /Users/nicholasanthony/Repos/socialmixx/socialmixx-ios"
+# alias killsim="  ps aux | grep _sim | grep -v grep | awk '{print $2}' | xargs kill -9 2>/dev/null"
+alias ss="cd /Users/nicholasanthony/Repos/socialmixx/socialmixx-ios/ios-starter/swift-starter"
+
+alias herlot="heroku logs -t"
+alias herlog="heroku logs"
+alias herpu="git push heroku master"
+alias herop="heroku open"
+# echo "DONE"
+
+alias killspot="sudo killall mds"
+alias killsoftup="ps -ef | grep softwareupdated | awk ‘{print $2}’ | xargs sudo kill -9"
+alias killdock="killall Dock"
+alias killfind="killall Finder"
+alias killer="killspot && killsoftup && killdock && killfind"
+
+alias pg_start="pg_ctl -D /usr/local/var/postgres start"
+alias pg_stop="pg_ctl -D /usr/local/var/postgres stop"
+
+
+# __OLD_PATH=$PATH
+# function updatePATHForNPM() {
+#   export PATH=$(npm bin):$__OLD_PATH
+# }
+
+# function node-mode() {
+#   PROMPT_COMMAND=updatePATHForNPM
+# }
+
+# function node-mode-off() {
+#   unset PROMPT_COMMAND
+#   PATH=$__OLD_PATH
+# }
+
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+
+echo "Ready to rock..."
+alias goWeb="/Users/nicholasanthony/Repos/goout/GoinOut_WebApp"
+
