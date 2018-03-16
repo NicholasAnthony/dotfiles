@@ -103,3 +103,47 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+  echo "\n💾  Loading RVM from $HOME/.nvm"
+  # This loads nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  # This loads nvm bash_completion
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  
+  echo "✔️ Done."
+else
+  echo "Can't find RVM loading script at $NVM_DIR/nvm.sh"
+fi
+
+echo "\n"
+
+if [[ -s "$ZSH_CONFIG_USER" ]]; then
+  echo "\n💾  Loading User Config $ZSH_CONFIG_USER"
+  source "$ZSH_CONFIG_USER"
+  echo "✔️ Done."
+else 
+  echo "User specific zsh config not found"
+fi
+
+echo "\n"
+
+if [[ -s "$USER_ALIASES" ]]; then
+  echo "\n💾  Loading User Aliases"
+  source "$USER_ALIASES" 
+  echo "✔️ Done."
+else
+  echo "User aliases not loaded"
+fi
+
+echo "\n"
+
+if [[ -s "$DOTFILES_PATH/iTerm/iTerm2colors.sh" ]]; then
+  echo "\n💾  Loading iTerm Colors"
+  source "$DOTFILES_PATH/iTerm/iTerm2colors.sh"
+  echo "✔️ Done."
+else
+  echo "❌ iTerm colors not loaded"
+fi
+
+echo "\n🎸 🎸 🎸 🎸 READYTOROCK 🔥 🔥 🔥 🔥 \n"
