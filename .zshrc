@@ -1,7 +1,7 @@
 echo "\n💾  Loading Common ZSH Script \n"
 
 echo "\n💾  Loading ENV vars"
-[[ -s "$SETTINGS_PATH/dotfiles/.env" ]] && source "$SETTINGS_PATH/dotfiles/.env"
+[[ -s "$DOTFILES_PATH/.env" ]] && source "$DOTFILES_PATH/.env"
 echo "✔️ Done. \n"
 
 # If you come from bash you might have to change your $PATH.

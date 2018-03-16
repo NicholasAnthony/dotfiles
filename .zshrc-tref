@@ -103,6 +103,6 @@ fi
 
 
 [[ -s "$USER_ALIASES" ]] && source "$USER_ALIASES" 
-[[ -s "$SETTINGS_PATH/iTerm/iTerm2colors.sh" ]] && source "$SETTINGS_PATH/iTerm/iTerm2colors.sh"
+[[ -s "$DOTFILES_PATH/iTerm/iTerm2colors.sh" ]] && source "$DOTFILES_PATH/iTerm/iTerm2colors.sh"
 
 echo "\n    🎸   Ready to rock... \n"
