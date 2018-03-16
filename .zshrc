@@ -111,7 +111,7 @@ if [[ -s "$NVM_DIR/nvm.sh" ]]; then
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
   # This loads nvm bash_completion
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  
-  echo "✔️ Done."
+  echo "✔️  Done."
 else
   echo "Can't find RVM loading script at $NVM_DIR/nvm.sh"
 fi
@@ -128,10 +128,20 @@ echo "\n"
 
 echo "\n"
 
+if [[ -s "$ALIASES" ]]; then
+  echo "\n💾  Loading Common Aliases"
+  source "$ALIASES" 
+  echo "✔️  Done."
+else
+  echo "Common aliases not loaded"
+fi
+
+echo "\n"
+
 if [[ -s "$USER_ALIASES" ]]; then
   echo "\n💾  Loading User Aliases"
   source "$USER_ALIASES" 
-  echo "✔️ Done."
+  echo "✔️  Done."
 else
   echo "User aliases not loaded"
 fi
@@ -141,9 +151,9 @@ echo "\n"
 if [[ -s "$DOTFILES_PATH/iTerm/iTerm2colors.sh" ]]; then
   echo "\n💾  Loading iTerm Colors"
   source "$DOTFILES_PATH/iTerm/iTerm2colors.sh"
-  echo "✔️ Done."
+  echo "✔️  Done."
 else
-  echo "❌ iTerm colors not loaded"
+  echo "❌  iTerm colors not loaded"
 fi
 
-echo "\n🎸 🎸 🎸 🎸 READYTOROCK 🔥 🔥 🔥 🔥 \n"
+echo "\n🎸 🎸 🎸 🎸  READYTOROCK  🔥 🔥 🔥 🔥 \n"
