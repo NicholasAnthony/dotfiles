@@ -1,4 +1,4 @@
-echo "\n💾  Loading Common ZSH Script \n"
+echo "\n💾  Loading Common ZSH Script"
 
 # echo "\n💾  Loading ENV vars"
 # [[ -s "$DOTFILES_PATH/.env" ]] && source "$DOTFILES_PATH/.env"
@@ -116,17 +116,6 @@ else
   echo "Can't find RVM loading script at $NVM_DIR/nvm.sh"
 fi
 
-echo "\n"
-
-# if [[ -s "$ZSH_CONFIG_USER" ]]; then
-#   echo "\n💾  Loading User Config $ZSH_CONFIG_USER"
-#   source "$ZSH_CONFIG_USER"
-#   echo "✔️ Done."
-# else 
-#   echo "User specific zsh config not found"
-# fi
-
-echo "\n"
 
 if [[ -s "$ALIASES" ]]; then
   echo "\n💾  Loading Common Aliases"
@@ -136,24 +125,13 @@ else
   echo "Common aliases not loaded"
 fi
 
-echo "\n"
-
-if [[ -s "$USER_ALIASES" ]]; then
-  echo "\n💾  Loading User Aliases"
-  source "$USER_ALIASES" 
-  echo "✔️  Done."
-else
-  echo "User aliases not loaded"
-fi
-
-echo "\n"
 
 if [[ -s "$DOTFILES_PATH/iTerm/iTerm2colors.sh" ]]; then
   echo "\n💾  Loading iTerm Colors"
   source "$DOTFILES_PATH/iTerm/iTerm2colors.sh"
   echo "✔️  Done."
 else
-  echo "❌  iTerm colors not loaded"
+  echo "\n❌  iTerm colors not loaded"
 fi
 
 echo "\n🎸 🎸 🎸 🎸  READYTOROCK  🔥 🔥 🔥 🔥 \n"
